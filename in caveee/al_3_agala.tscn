@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://moit3xhmlpcb"]
+
+[ext_resource type="Texture2D" uid="uid://dtyf85g2gmyvk" path="res://Rocky Roads/Rocky Roads/Enemies/saw.png" id="1_lba3l"]
+[ext_resource type="Script" uid="uid://ssgho0ve7tu7" path="res://al_3_agala.gd" id="1_ppqof"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyvpj"]
+radius = 8.0
+
+[node name="al 3agala" type="StaticBody2D" groups=["enemy"]]
+script = ExtResource("1_ppqof")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.43051e-06, 0)
+rotation = -0.0146489
+scale = Vector2(0.484848, 0.470588)
+texture = ExtResource("1_lba3l")
+region_enabled = true
+region_rect = Rect2(1, 0, 33, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gyvpj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwbypsl4rt0yi"]
+
+[ext_resource type="Script" uid="uid://cesp3vefju8su" path="res://3333333333.gd" id="1_hljxl"]
+[ext_resource type="Texture2D" uid="uid://bdje13nbplpe8" path="res://Assets/tiles.png" id="1_nhl4r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ksjs"]
+size = Vector2(48, 138)
+
+[node name="3333333333" type="StaticBody2D" groups=["enemy"]]
+script = ExtResource("1_hljxl")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(0, 56)
+texture = ExtResource("1_nhl4r")
+region_enabled = true
+region_rect = Rect2(96, 32, 48, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nhl4r")
+region_enabled = true
+region_rect = Rect2(96, 15, 48, 34)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(0, 95)
+texture = ExtResource("1_nhl4r")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(96, 15, 48, 34)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(0, 72)
+texture = ExtResource("1_nhl4r")
+region_enabled = true
+region_rect = Rect2(96, 32, 48, 16)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 24)
+texture = ExtResource("1_nhl4r")
+region_enabled = true
+region_rect = Rect2(96, 32, 48, 16)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(0, 40)
+texture = ExtResource("1_nhl4r")
+region_enabled = true
+region_rect = Rect2(96, 32, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 53)
+shape = SubResource("RectangleShape2D_7ksjs")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(-16, 116)
+texture = ExtResource("1_nhl4r")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(368, 54, 16, 10)
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(0, 116)
+texture = ExtResource("1_nhl4r")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(368, 54, 16, 10)
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(16, 116)
+texture = ExtResource("1_nhl4r")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(368, 54, 16, 10)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

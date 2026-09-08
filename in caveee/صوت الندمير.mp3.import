@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4cn5vd3u1pxi"
+path="res://.godot/imported/صوت الندمير.mp3-a613a00582ec095f73740856361dbf76.mp3str"
+
+[deps]
+
+source_file="res://صوت الندمير.mp3"
+dest_files=["res://.godot/imported/صوت الندمير.mp3-a613a00582ec095f73740856361dbf76.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

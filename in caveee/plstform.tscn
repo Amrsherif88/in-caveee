@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://valbj4nod45i"]
+
+[ext_resource type="Texture2D" uid="uid://bdje13nbplpe8" path="res://Assets/tiles.png" id="1_gr1bs"]
+[ext_resource type="Script" uid="uid://bug04oee8wuos" path="res://plstform.gd" id="1_x4adt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_retjc"]
+size = Vector2(32, 16)
+
+[node name="platform" type="CharacterBody2D"]
+script = ExtResource("1_x4adt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gr1bs")
+region_enabled = true
+region_rect = Rect2(176, 48, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_retjc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy4dy2i5sd37b"]
+
+[ext_resource type="Script" uid="uid://b7c4yae13ljq1" path="res://t7t almafshakha.gd" id="1_sev41"]
+[ext_resource type="AudioStream" uid="uid://b4cn5vd3u1pxi" path="res://�������.mp3" id="2_a5onq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdfu8"]
+size = Vector2(12, 19)
+
+[node name="t7t al mafshakha" type="StaticBody2D"]
+position = Vector2(1789, 2059)
+script = ExtResource("1_sev41")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(9, 0)
+shape = SubResource("RectangleShape2D_gdfu8")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_a5onq")
+autoplay = true
+playback_type = 1
+parameters/looping = false
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

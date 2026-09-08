@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbdmnadxb63nv"]
+
+[ext_resource type="Script" uid="uid://da12ao4l3s0pg" path="res://lavaaaaaa_2.gd" id="1_6ov3h"]
+[ext_resource type="Texture2D" uid="uid://bdje13nbplpe8" path="res://Assets/tiles.png" id="1_qtul8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_telr7"]
+size = Vector2(32, 16.5)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5dh28"]
+
+[node name="lavaaaaaa 2" type="CharacterBody2D"]
+script = ExtResource("1_6ov3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_telr7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qtul8")
+region_enabled = true
+region_rect = Rect2(176, 16, 32, 16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5dh28")
+}

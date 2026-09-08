@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt58gskj2ldbi"]
+
+[ext_resource type="Script" uid="uid://cvlaaklo2evg2" path="res://touch.gd" id="1_e3rrq"]
+[ext_resource type="Texture2D" uid="uid://k8m3esonnefl" path="res://kenney_onscreen-controls/Sprites/flat-dark/flatDark23.png" id="1_n8fi0"]
+[ext_resource type="Texture2D" uid="uid://budyhqsheq7wy" path="res://kenney_onscreen-controls/Sprites/flat-dark/flatDark24.png" id="2_e3rrq"]
+[ext_resource type="Texture2D" uid="uid://cjetdstp7opd5" path="res://kenney_onscreen-controls/Sprites/flat-dark/flatDark25.png" id="3_lce3v"]
+
+[node name="touch" type="CanvasLayer"]
+script = ExtResource("1_e3rrq")
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(16, 208)
+scale = Vector2(0.54, 0.54)
+texture_normal = ExtResource("1_n8fi0")
+action = "ui_left"
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(77, 208)
+scale = Vector2(0.54, 0.54)
+texture_normal = ExtResource("2_e3rrq")
+action = "ui_right"
+
+[node name="up" type="TouchScreenButton" parent="."]
+position = Vector2(400, 208)
+scale = Vector2(0.54, 0.54)
+texture_normal = ExtResource("3_lce3v")
+action = "ui_up"
+
+[connection signal="pressed" from="left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="up" to="." method="_on_up_pressed"]

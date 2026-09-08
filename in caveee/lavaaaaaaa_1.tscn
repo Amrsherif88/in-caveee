@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3hy5ofhejiyq"]
+
+[ext_resource type="Texture2D" uid="uid://bdje13nbplpe8" path="res://Assets/tiles.png" id="1_or6qf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onoqm"]
+size = Vector2(32, 16.5)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5dh28"]
+
+[node name="lavaaaaaaa 1" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_onoqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_or6qf")
+region_enabled = true
+region_rect = Rect2(176, 16, 32, 16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5dh28")
+}
